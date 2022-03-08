@@ -11,8 +11,6 @@ int main(int argc, char *argv[])
 #endif
     QGuiApplication app(argc, argv);
 
-    HttpRequest req;
-    req.get(QUrl("http://qt-project.org"));
     qmlRegisterType<HttpRequest>("Test", 1, 0, "HttpRequest");
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
